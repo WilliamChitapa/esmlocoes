@@ -1,70 +1,36 @@
-<!DOCTYPE html><html class="dark" lang="pt-BR"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ESM Locações | Engenharia e Precisão em Movimento</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
           theme: {
             extend: {
               "colors": {
-                      "inverse-surface": "#e2e2e2",
-                      "on-surface-variant": "#ddc1ae",
-                      "on-background": "#e2e2e2",
-                      "on-secondary-container": "#b7b5b4",
-                      "on-primary-fixed-variant": "#6e3900",
-                      "background": "#121414",
-                      "tertiary-fixed-dim": "#c8c6c5",
-                      "tertiary": "#c8c6c5",
-                      "primary": "#ffb77d",
-                      "surface-container-lowest": "#0c0f0f",
-                      "surface-container": "#1e2020",
-                      "on-surface": "#e2e2e2",
-                      "secondary": "#c8c6c5",
-                      "surface-bright": "#37393a",
-                      "on-tertiary-container": "#3e3e3e",
-                      "on-error-container": "#ffdad6",
-                      "primary-fixed-dim": "#ffb77d",
-                      "on-secondary": "#313030",
-                      "on-tertiary": "#303030",
-                      "on-error": "#690005",
-                      "on-tertiary-fixed-variant": "#474746",
-                      "error": "#ffb4ab",
-                      "tertiary-container": "#aba9a9",
-                      "on-tertiary-fixed": "#1b1c1c",
-                      "on-primary-container": "#623200",
-                      "inverse-on-surface": "#2f3131",
-                      "primary-fixed": "#ffdcc3",
-                      "on-primary-fixed": "#2f1500",
-                      "inverse-primary": "#904d00",
-                      "tertiary-fixed": "#e4e2e1",
-                      "surface-tint": "#ffb77d",
-                      "on-primary": "#4d2600",
-                      "surface-dim": "#121414",
-                      "primary-container": "#ff8c00",
-                      "surface": "#121414",
-                      "surface-container-low": "#1a1c1c",
-                      "secondary-fixed": "#e5e2e1",
-                      "on-secondary-fixed": "#1c1b1b",
-                      "secondary-fixed-dim": "#c8c6c5",
-                      "surface-variant": "#333535",
-                      "outline-variant": "#564334",
-                      "outline": "#a48c7a",
-                      "on-secondary-fixed-variant": "#474746",
-                      "secondary-container": "#474746",
-                      "error-container": "#93000a",
-                      "surface-container-highest": "#333535",
-                      "surface-container-high": "#282a2b"
+                      "primary": "#1E40AF", // Corporate Blue
+                      "primary-container": "#1D4ED8", // Deeper Blue
+                      "on-primary-container": "#FFFFFF",
+                      "background": "#FFFFFF",
+                      "surface-container": "#F8FAFC", // Light Grey
+                      "surface-container-low": "#F1F5F9",
+                      "surface-container-high": "#FFFFFF",
+                      "on-surface": "#1E293B", // Deep charcoal
+                      "on-surface-variant": "#475569", 
+                      "outline-variant": "#E2E8F0",
+                      "border-industrial": "#CBD5E1",
+                      "headline-blue": "#0F172A"
               },
               "borderRadius": {
                       "DEFAULT": "0.125rem",
                       "lg": "0.25rem",
                       "xl": "0.5rem",
-                      "full": "0.75rem"
+                      "full": "9999px"
               },
               "spacing": {
                       "sm": "12px",
@@ -102,206 +68,201 @@
     </script>
 <style>
         body {
-            background-color: #121414;
-            color: #e2e2e2;
+            background-color: #FFFFFF;
+            color: #1E293B;
             font-family: 'Inter', sans-serif;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .industrial-border {
-            border: 1px solid #333333;
-        }
-        .orange-glow:focus {
-            box-shadow: 0 0 0 1px #ff8c00;
-            border-color: #ff8c00;
-        }
-        .zebra-table tr:nth-child(even) {
-            background-color: #1a1c1c;
+            border: 1px solid #E2E8F0;
         }
         .hero-gradient {
-            background: linear-gradient(to bottom, rgba(18, 20, 20, 0.4), rgba(18, 20, 20, 1));
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.6));
+        }
+        @media (max-width: 768px) {
+            .hero-gradient {
+                background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+            }
         }
         .card-hover:hover {
-            border-color: #ff8c00;
+            border-color: #1E40AF;
             transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="selection:bg-primary-container selection:text-on-primary-container">
+<body class="selection:bg-primary/20 selection:text-primary">
 <!-- TopNavBar -->
-<header class="w-full top-0 sticky z-50 bg-background dark:bg-background border-b border-outline-variant">
-<div class="max-w-7xl mx-auto px-margin flex justify-between items-center h-24">
-<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary tracking-tighter uppercase">
-                ESM Locações
-            </div>
-<nav class="hidden md:flex items-center gap-md">
+<header class="w-full top-0 sticky z-50 bg-white border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin flex justify-between items-center h-20 md:h-24">
+<div class="font-headline-lg text-2xl md:text-headline-lg font-bold text-primary tracking-tighter uppercase">
+            ESM Locações
+        </div>
+<nav class="hidden lg:flex items-center gap-md">
 <a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Home</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#catalogo">Máquinas</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#catalogo">Caçambas</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#como-funciona">Como Funciona</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#sobre">Sobre Nós</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contato">Contato</a>
 </nav>
-<div class="flex items-center gap-md">
-<button class="bg-primary-container text-on-primary-container px-md py-sm font-label-md text-label-md font-bold uppercase active:scale-95 transition-transform hover:brightness-110">
-                    Solicitar Orçamento
-                </button>
+<div class="flex items-center">
+<button class="bg-primary text-white px-4 md:px-md py-2 md:py-sm font-label-md text-sm md:text-label-md font-bold uppercase active:scale-95 transition-transform hover:bg-primary-container shadow-md">
+                Orçamento
+            </button>
 </div>
 </div>
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[800px] flex items-center overflow-hidden">
+<section class="relative min-h-[600px] md:h-[700px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAH7szgen1fxFVvaMqYh_ag81m_DhjkCA5X5CLuyr_VKMomrTfF82pZ1mPiwNt79fQ4REkA1nWqtqS-oTMPU-gkvmeEoOPPk6qixbycXcquhK53vi0k2o6Ks8Mr3eePRLOdpnipzSsLicQ57RMYLW6elVEg9pZUkOL5Itke1pEiRUkOeOIJ9Bi4iv4klL8B9AjrPwCEFvRe2YggXLEYH3eKe9UwDZkd4JOVhGFd_chgQ0fiz9C6FQLje3wrVl4Az33ia25YR-vNL3M')"></div>
 <div class="absolute inset-0 hero-gradient"></div>
 </div>
-<div class="relative z-10 max-w-7xl mx-auto px-margin w-full">
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin w-full py-xl md:py-0">
 <div class="max-w-2xl space-y-md">
-<span class="inline-block px-sm py-1 bg-primary-container/10 border border-primary/30 text-primary font-label-md text-label-md uppercase tracking-widest">
-                        Infraestrutura Industrial
-                    </span>
-<h1 class="font-display-lg text-display-lg text-white leading-tight">
-                        ESM Locações:<br><span class="text-primary">Sua Obra em Movimento</span>
+<span class="inline-block px-sm py-1 bg-primary/20 border border-primary/30 text-white font-label-md text-xs md:text-label-md uppercase tracking-widest">
+                    Infraestrutura Industrial
+                </span>
+<h1 class="font-display-lg text-4xl md:text-display-lg text-white leading-tight">
+                    ESM Locações:<br/><span class="text-white">Sua Obra em Movimento</span>
 </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                        Aluguel de máquinas pesadas e caçambas estacionárias com precisão e confiabilidade industrial. Tecnologia de ponta para a máxima eficiência no seu canteiro.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-md pt-base">
-<a class="bg-primary-container text-black px-xl py-md font-label-md text-label-md font-bold text-center uppercase transition-all hover:brightness-110 active:scale-95" href="#catalogo">
-                            Ver Catálogo
-                        </a>
-<a class="border-2 border-white text-white px-xl py-md font-label-md text-label-md font-bold text-center uppercase transition-all hover:bg-white hover:text-black active:scale-95" href="#contato">
-                            Falar com Consultor
-                        </a>
+<p class="font-body-lg text-base md:text-body-lg text-slate-200">
+                    Aluguel de máquinas pesadas e caçambas estacionárias com precisão e confiabilidade industrial. Tecnologia de ponta para a máxima eficiência no seu canteiro.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-base">
+<a class="bg-primary text-white px-8 md:px-xl py-3 md:py-md font-label-md text-label-md font-bold text-center uppercase transition-all hover:bg-primary-container active:scale-95 shadow-lg" href="#catalogo">
+                        Ver Catálogo
+                    </a>
+<a class="border-2 border-white text-white px-8 md:px-xl py-3 md:py-md font-label-md text-label-md font-bold text-center uppercase transition-all hover:bg-white hover:text-primary active:scale-95" href="#contato">
+                        Falar com Consultor
+                    </a>
 </div>
 </div>
 </div>
 </section>
 <!-- Service Highlights -->
-<section class="py-xl bg-surface-container-lowest">
-<div class="max-w-7xl mx-auto px-margin">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Highlight 1 -->
-<div class="bg-surface-container p-md industrial-border group transition-all duration-300 hover:border-primary/50">
-<div class="w-16 h-16 bg-surface-variant flex items-center justify-center mb-md group-hover:bg-primary-container/20 transition-colors">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="construction">construction</span>
+<section class="py-16 md:py-xl bg-surface-container">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-gutter">
+<div class="bg-white p-6 md:p-md industrial-border group transition-all duration-300 hover:border-primary">
+<div class="w-14 h-14 md:w-16 md:h-16 bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl md:text-4xl" data-icon="construction">construction</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">Locação de Máquinas</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            Equipamentos modernos com manutenção preventiva rigorosa para garantir zero tempo de inatividade em sua operação.
-                        </p>
+<h3 class="font-headline-md text-xl md:text-headline-md text-headline-blue mb-sm">Locação de Máquinas</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">
+                        Equipamentos modernos com manutenção preventiva rigorosa para garantir zero tempo de inatividade em sua operação.
+                    </p>
 </div>
-<!-- Highlight 2 -->
-<div class="bg-surface-container p-md industrial-border group transition-all duration-300 hover:border-primary/50">
-<div class="w-16 h-16 bg-surface-variant flex items-center justify-center mb-md group-hover:bg-primary-container/20 transition-colors">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="delete_sweep">delete_sweep</span>
+<div class="bg-white p-6 md:p-md industrial-border group transition-all duration-300 hover:border-primary">
+<div class="w-14 h-14 md:w-16 md:h-16 bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl md:text-4xl" data-icon="delete_sweep">delete_sweep</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">Caçambas Estacionárias</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            Gestão eficiente de entulho com caçambas padronizadas, posicionamento preciso e retirada agendada via sistema.
-                        </p>
+<h3 class="font-headline-md text-xl md:text-headline-md text-headline-blue mb-sm">Caçambas Estacionárias</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">
+                        Gestão eficiente de entulho com caçambas padronizadas, posicionamento preciso e retirada agendada via sistema.
+                    </p>
 </div>
-<!-- Highlight 3 -->
-<div class="bg-surface-container p-md industrial-border group transition-all duration-300 hover:border-primary/50">
-<div class="w-16 h-16 bg-surface-variant flex items-center justify-center mb-md group-hover:bg-primary-container/20 transition-colors">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="local_shipping">local_shipping</span>
+<div class="bg-white p-6 md:p-md industrial-border group transition-all duration-300 hover:border-primary">
+<div class="w-14 h-14 md:w-16 md:h-16 bg-surface-container flex items-center justify-center mb-md group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl md:text-4xl" data-icon="local_shipping">local_shipping</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">Logística de Resíduos</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            Transporte e destinação final de resíduos industriais em conformidade com as normas ambientais vigentes.
-                        </p>
+<h3 class="font-headline-md text-xl md:text-headline-md text-headline-blue mb-sm">Logística de Resíduos</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant">
+                        Transporte e destinação final de resíduos industriais em conformidade com as normas ambientais vigentes.
+                    </p>
 </div>
 </div>
 </div>
 </section>
 <!-- Featured Fleet (Catálogo) -->
-<section class="py-xl bg-background" id="catalogo">
-<div class="max-w-7xl mx-auto px-margin">
-<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<section class="py-16 md:py-xl bg-white" id="catalogo">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-xl gap-md">
 <div>
-<h2 class="font-headline-lg text-headline-lg text-white uppercase mb-xs">Catálogo de Frota</h2>
-<div class="h-1 w-24 bg-primary"></div>
+<h2 class="font-headline-lg text-2xl md:text-headline-lg text-headline-blue uppercase mb-xs">Catálogo de Frota</h2>
+<div class="h-1.5 w-24 bg-primary"></div>
 <p class="mt-sm text-on-surface-variant">Equipamentos de alta performance para todas as escalas de projeto.</p>
 </div>
 </div>
 <!-- Row 1: Caçambas -->
-<div class="mb-xl">
+<div class="mb-16 md:mb-xl">
 <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-md flex items-center gap-xs">
 <span class="material-symbols-outlined" data-icon="folder_zip">folder_zip</span> Caçambas e Armazenamento
-                    </h4>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-gutter">
 <!-- Card 1 -->
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional industrial photograph of a pristine yellow 4 cubic meter waste container. The image is captured in a high-contrast style with sharp focus on the metallic texture. The background shows a modern construction site with clean gray concrete and steel elements under a cinematic dusk light, emphasizing the ESM Locações brand's industrial orange and dark gray palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxnR53h_TIHHXg2xGHjlPa-avTBN73dtCc5m8-yPGUh_T1KybabhrDqHnUTFMJWxM2gJ82BACFXZiUZp5J7A12lRWCWLWm5Td_kNm4-IwfdH3HDnCEi4yVdIQtuGj3WTemjIgvtqc-YwuvYJ_mABnTe58BnFguCoboGKKIhCt0Us8StJ58AIdExpo5I-w-wnq2BUtn04gYT6cU1iz3SRk1JC0sZB_2R71kX519Hoggid_yvPtQ23705AvgAT6Jjwd1Pm9zuk9jNcc">
-<div class="absolute top-sm right-sm bg-background/80 backdrop-blur px-sm py-1 font-label-sm text-label-sm text-primary">Destaque</div>
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden relative bg-slate-100">
+<img alt="Caçamba Standard 4m³" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxnR53h_TIHHXg2xGHjlPa-avTBN73dtCc5m8-yPGUh_T1KybabhrDqHnUTFMJWxM2gJ82BACFXZiUZp5J7A12lRWCWLWm5Td_kNm4-IwfdH3HDnCEi4yVdIQtuGj3WTemjIgvtqc-YwuvYJ_mABnTe58BnFguCoboGKKIhCt0Us8StJ58AIdExpo5I-w-wnq2BUtn04gYT6cU1iz3SRk1JC0sZB_2R71kX519Hoggid_yvPtQ23705AvgAT6Jjwd1Pm9zuk9jNcc"/>
+<div class="absolute top-sm right-sm bg-primary px-sm py-1 font-label-sm text-label-sm text-white">Destaque</div>
 </div>
 <div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Caçamba Standard 4m³</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Ideal para reformas residenciais e pequenos volumes de entulho.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Caçamba Standard 4m³</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Ideal para reformas residenciais e pequenos volumes de entulho.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
 </div>
 </div>
-<!-- Duplicate Placeholder Cards for Visual Structure -->
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, industrial yellow 7 cubic meter metal container used for large construction debris. The photography style is minimalist and high-end, set against a dark architectural background with subtle orange glowing highlights. The lighting is precise, emphasizing the durability and clean lines of the heavy equipment used in professional waste management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAObAOTzyL8gQ0dCB8EE2FpeEGdvpeyh8uv9cP31m3rOInEnRCyo5Kwg-BPCY0i_7lfuZ3UVSMARvyDDQ3gOu_0Rg0wfkjleQAyMjCaYO4MaEf7PEOyhTXg7UTrbAcPVGX0ECz2M7yRKu2nUcrsJ8vALWcPm2Ezk7MN_lJqV_v88zA6u5U0babv_KCzrDIgofnp3LGRjE-ulgITkHy1JXxOPwcWeWQVql5ZKbH4HyiTDcJfOVq1OVIKc7h8aGuohIXClq37tE7Zlsg">
-</div>
-<div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Caçamba Reforçada 7m³</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Capacidade aumentada para obras de médio porte e demolições.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
-</div>
-</div>
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A large-scale industrial industrial debris container for heavy waste management, painted in the signature ESM Locações yellow. The scene is shot in a high-tech warehouse environment with technical lighting and deep slate shadows. The focus is on the heavy-duty hinges and reinforced steel panels, conveying a sense of uncompromising industrial strength and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZ9zBEyWiB3hEeEV3CrJj6ujvuzlaT0VRJcat17OIh_2OrjictKzd6M04Mqn3ItK0qcAcwe-q2y-01EFQzw8Edob_SIrd5-lHrs4xCYbs6yrKz8SI0mgHxH1Hiexr8rWJX9uNs7oDT2O9cysa1Lj43-nCcN2NrH6DlTwUCB48OwNjxoXGfUKJIUw7CfJ1xgkBoMErC7XBMHxo_YUBby9rwlyizZWZQi3-ycp6zgwQcWWuNWkryWtdUpgqcIxWCiA2qLLV8wzUraI">
+<!-- Card 2: Blue Container -->
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden relative bg-slate-100">
+<img alt="Caçamba Industrial Azul" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvA3Czi0nZUjKcLp0NWo_PdwysE4ecgdplk3NNj_46Ph0YHCs0NieLcfJdVaMgLzsG9HUSnnTIv2vJu4qWAAUtGiJhuvI3J634_sh2j2npBtIq7vbQUG4Pkp9W8z1ceQZipvcVAXg4QinsA1Rjp7vcexUJW2W0ZgR_WQx06YzDrZHU0LhxE1W5uFJ_TB3jbCoKlEtHWpma_SkHKvKvJsAGoxIQMP7yb2hCHTrai3xVjZ6Izko_vVplEnAkr4VAU2x4xM71w6txfX0"/>
 </div>
 <div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Caçamba Industrial 10m³</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Projetada para logística reversa e grandes resíduos industriais.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Caçamba Industrial Azul</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Logística pesada para resíduos industriais em larga escala.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden relative bg-slate-100">
+<img alt="Caçamba Reforçada 7m³" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAObAOTzyL8gQ0dCB8EE2FpeEGdvpeyh8uv9cP31m3rOInEnRCyo5Kwg-BPCY0i_7lfuZ3UVSMARvyDDQ3gOu_0Rg0wfkjleQAyMjCaYO4MaEf7PEOyhTXg7UTrbAcPVGX0ECz2M7yRKu2nUcrsJ8vALWcPm2Ezk7MN_lJqV_v88zA6u5U0babv_KCzrDIgofnp3LGRjE-ulgITkHy1JXxOPwcWeWQVql5ZKbH4HyiTDcJfOVq1OVIKc7h8aGuohIXClq37tE7Zlsg"/>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Caçamba Reforçada 7m³</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Capacidade aumentada para obras de médio porte e demolições.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
 </div>
 </div>
 </div>
 </div>
 <!-- Row 2: Mini Máquinas -->
-<div class="mb-xl">
+<div class="mb-16 md:mb-xl">
 <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-md flex items-center gap-xs">
 <span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span> Mini Máquinas e Agilidade
-                    </h4>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-tech professional photograph of a compact mini excavator, highlighting its sleek mechanical arms and treads. The machine is parked in a clean construction zone with geometric shadows. The lighting is sharp and technical, emphasizing the high-contrast modern aesthetic of ESM Locações, featuring deep blacks and signature orange accents in a professional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjw1Ufe_b7u9TOdd7xwstJu3U5ilxp7uMVhaEd0VcMIx1Zt8qIW7p872YDtemHDpsDQJZiNXsBvCIQZ2DXslsMCdQSCFRMxDQ_GSXZ4FG7TnE6iN799E8ez6ssRXAtF0QGdN6wMw1bP_fwcH3ErSWSkOEEK2D3LXbUfnWNGjCPoWph7OSRO1ZgYbQBRGgm9dQ4KBE-OmI8Su1sRowAUirmAcLR8ZU5ZzofQUgQe3F4TisV1nbz8PAeCFmns7EN3WZ4zONVAZstl-s">
+                </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-gutter">
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden bg-slate-100">
+<img alt="Mini Escavadeira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjw1Ufe_b7u9TOdd7xwstJu3U5ilxp7uMVhaEd0VcMIx1Zt8qIW7p872YDtemHDpsDQJZiNXsBvCIQZ2DXslsMCdQSCFRMxDQ_GSXZ4FG7TnE6iN799E8ez6ssRXAtF0QGdN6wMw1bP_fwcH3ErSWSkOEEK2D3LXbUfnWNGjCPoWph7OSRO1ZgYbQBRGgm9dQ4KBE-OmI8Su1sRowAUirmAcLR8ZU5ZzofQUgQe3F4TisV1nbz8PAeCFmns7EN3WZ4zONVAZstl-s"/>
 </div>
 <div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Mini Escavadeira E10</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Agilidade extrema em espaços reduzidos e passagens estreitas.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Mini Escavadeira E10</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Agilidade extrema em espaços reduzidos e passagens estreitas.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
 </div>
 </div>
-<!-- Placeholders -->
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern compact skid steer loader in a studio-like industrial setting. The machine is vibrant yellow against a dark, metallic background. The image uses high-key lighting to show off the hydraulic systems and robust tires. The overall mood is futuristic and reliable, perfectly aligned with the industrial technology theme of ESM Locações." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgXTap5OPYk5kYYMJsWVDdtFFmJx-laR7NXDTlit02NJy_WwGxnuAl-vnbiyf8or5kwPM-dgkOHyd0ENpzbOVSu2daYwAmrDQPIgwOckwaychxOcWGUpusY8jWPd14LBpGexHg4m_HvSv18ryJQrsEShpzrvfsI-FVc5eo52PmD8kL7VSQjRS9FAmnoSYhAipywLV_nLmqAwlR4GCcud4b5d2cS-mFA3u7-PojykrutOnD8ESwE8jqU485hRF3stHw8rioaeLpRTU">
-</div>
-<div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Mini Carregadeira S450</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Versatilidade em transporte de carga em canteiros compactos.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
-</div>
-</div>
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A specialized compact track loader with rubber treads, designed for sensitive terrain. The photography is dramatic with low-angle shots and sharp, mathematical focus. The background is a clean, dark industrial environment with orange lens flares and deep charcoal textures, reflecting a premium and authoritative tool-like interface style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8o7IMUWfBgEMjDC2FXGMe_dYp1jKXuT_WPpellsGA8kLWpMYajAtJGaGlbjg278g_3kvlmBPvCyKvyF7vqEc8GctpImgvyj7DxR_PVYWZ8KuQ2bSs_5dTJR5LeafEi_OoVnJTS8gydt5C1R0-vwcL8Nak16wSET89tKaMm86UkcwNeunv3MUHrMyupiguXxkiundcVdxjYIfRKZcLsZ3dWbzgT4A4GQpbguMxElpgHicwIgT-JMSqUXSYIdwyiaxc1DVUBD2lF_w">
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden bg-slate-100">
+<img alt="Mini Carregadeira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgXTap5OPYk5kYYMJsWVDdtFFmJx-laR7NXDTlit02NJy_WwGxnuAl-vnbiyf8or5kwPM-dgkOHyd0ENpzbOVSu2daYwAmrDQPIgwOckwaychxOcWGUpusY8jWPd14LBpGexHg4m_HvSv18ryJQrsEShpzrvfsI-FVc5eo52PmD8kL7VSQjRS9FAmnoSYhAipywLV_nLmqAwlR4GCcud4b5d2cS-mFA3u7-PojykrutOnD8ESwE8jqU485hRF3stHw8rioaeLpRTU"/>
 </div>
 <div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Mini Escavadeira E26</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Equilíbrio perfeito entre força e tamanho para valas precisas.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Mini Carregadeira S450</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Versatilidade em transporte de carga em canteiros compactos.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
+</div>
+</div>
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden bg-slate-100">
+<img alt="Pá Carregadeira Industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBLgI8OBq2L-5NsKAMhLoPkPjiY9LZAD1tZ5vq-NtpEEHQcR6Q8CsWccMva3JAWuD6UbQXpsP74zVTyiuby1HuSY33qW1iPR-IHPsts2zQvf9PRq3gvEqqUba0vZi7kMZgY3MGbS5wwmE0vqZP6eh1j6-RuHe-mFG81htSyDg3ljEeqKbM5SXVVNcynj9V-ngrio5n3aQ7waWSnXynCaCA8KPVY8VW1qwJzcrYTnPbpydrW5JhdW4vZK10JpvqSi7yCP3pxx0j1jc"/>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Pá Carregadeira</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Potência e agilidade para movimentação de materiais pesados.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
 </div>
 </div>
 </div>
@@ -310,37 +271,38 @@
 <div>
 <h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-md flex items-center gap-xs">
 <span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span> Linha Pesada e Performance
-                    </h4>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A powerful heavy-duty backhoe loader captured in action at a large-scale infrastructure project. The lighting is warm sunrise, creating long, dramatic shadows and highlighting the heavy steel components. The aesthetic is raw strength meets sophisticated engineering, consistent with the ESM Locações dark mode UI and industrial orange brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH2E16kynKoA7r62ySgenBLkqwG6ffyXekpESuwrliLsByv0rMnFEOZqXNgUd0eXyXdr6MywN-qaGlrSLzy92wY3V49bLuE8FkSY6Fqcf2ILWMdAWt2VpLbiGaKFdacnA1w_9yTUsr9n9ZGeN7UIzfD3fFR-WBQ7Tdgzo-UK6SM5AxBoSnOlRgHr9LPIODJ3CwLILAE4SLXYqvlslMpDUHKeF10o0pw58RuhdPkFHozkWN1TkF24HNz0nxeumldhSUrl3fHHh25lA">
+                </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-gutter">
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden bg-slate-100">
+<img alt="Retroescavadeira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH2E16kynKoA7r62ySgenBLkqwG6ffyXekpESuwrliLsByv0rMnFEOZqXNgUd0eXyXdr6MywN-qaGlrSLzy92wY3V49bLuE8FkSY6Fqcf2ILWMdAWt2VpLbiGaKFdacnA1w_9yTUsr9n9ZGeN7UIzfD3fFR-WBQ7Tdgzo-UK6SM5AxBoSnOlRgHr9LPIODJ3CwLILAE4SLXYqvlslMpDUHKeF10o0pw58RuhdPkFHozkWN1TkF24HNz0nxeumldhSUrl3fHHh25lA"/>
 </div>
 <div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Retroescavadeira B95</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Força bruta para grandes projetos de escavação e aterro.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Retroescavadeira B95</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Força bruta para grandes projetos de escavação e aterro.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
 </div>
 </div>
-<!-- Placeholders -->
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A massive yellow hydraulic excavator positioned on a dark slate surface. The image is captured with professional technical precision, showcasing the scale of the machinery against a minimalist industrial horizon. The color palette is strictly controlled with blacks, grays, and the signature ESM orange, creating a high-end control deck feeling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX24AsDVPrTQp0VetDjh3_pkckxxtqrpTVYx6KerHa3o6U0okUD81124pt2rxoLJTYKLkxuk2Tb-6HcvNekdA8CB3XYXVHTIl5CfRssrtqeaKGy4u5_TSD3P1j31-sKdZW9PwUwp9HCX8SZnGncyJ-Ki4W9DjTmXYFZc8NbC5xF9tAoI0LP-DlNhgOrTsICfk-T82GQ2hg54lH9l_RvQObrMb7N1r9MXIMpLvDxdiUzMtRaEj9ijFU0o9mZuFLP6ojE80mDvzDw0o">
-</div>
-<div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Escavadeira Hidráulica 20T</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Máxima produtividade em movimentação de grandes volumes.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
-</div>
-</div>
-<div class="bg-surface-container-high industrial-border group overflow-hidden transition-all duration-300 card-hover">
-<div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A heavy-duty road roller for soil compaction in a high-contrast industrial setting. The metallic textures of the roller and the mechanical details are sharply defined. The scene is illuminated by technical cold lighting with orange highlights, creating a powerful and authoritative visual that represents the premium quality of the equipment fleet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADQWwHkhovnhAafWnNIVoG6Vl3uL26qJ28Xm4KUVtm8bLmbV7WOt3gX-HiqHVVzcShfV1tXtAHexzR4-RDntVDTDfBr_CaNf8CEEnxHgtCXOE-WfYiAoHOm33rOrDBbDIL2JBCZHFCfMohmHKK-1nr0lC0iDnVnv6CMartemTJxrhosdAQzI15FMs2JyIbwsZYKSA_NyuvZE290LTi6KRiyv_CYfIZLOClg7u15V7TxO0de75yKIZ0dDbXnAIgpYCzALZUov6PlBY">
+<!-- Crawler Excavator -->
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden bg-slate-100">
+<img alt="Escavadeira de Esteira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6f__QGtGbxAkyDUqUNnVJTk6jsKIQBWZ_6X3KOPvBiAfZzbTRLduUhTGk1KA8N-OVD_LX1t7AEm7qoo5duJ2goFGw1ix2N2-rN9Z336YFEjeNcvnYo7WaiJImlWNJQyoBcmu3mkoPHuLv1CGlVmR0ONZ8pkqBSM3EYJTr5-WH1adiS4T1mBacRy_nSQVsGPgUSw5mLqbAUPCqm19dCoiEuy70OOSUiAwX95E1Nwg-4vDHpN8Hfw-E8ASGlSHXIbYIMDqR1kDwyXw"/>
 </div>
 <div class="p-md">
-<h3 class="font-headline-md text-headline-md text-white mb-xs">Rolo Compactador CA25</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">Tecnologia avançada para compactação de solo com alta precisão.</p>
-<button class="w-full border border-outline-variant py-sm text-white font-label-md hover:bg-white hover:text-black transition-colors uppercase">Solicitar</button>
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Escavadeira de Esteira</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Estabilidade superior para operações em terrenos complexos.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
+</div>
+</div>
+<!-- Steam Roller -->
+<div class="bg-white industrial-border group overflow-hidden transition-all duration-300 card-hover">
+<div class="h-64 overflow-hidden bg-slate-100">
+<img alt="Rolo Compactador" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45Ajc47dGyE-Jrgmi6N_8P_gcLParbbSrW6VVyR4RVy5EHaAhZq8JpzFHn3AVltVm5uXMDBGkfJPkzyEVufvQshKeIZ6-uFZCIBBWkL8SOr45lKnv7DRPlAZSlJrXqa9AWwHm5VvzYOyM8sYc_hk5Umq--pkY9D-h7JSxrHqjujhXzLpW6kgwvN5G_VaPpz0xODUQu-9RXwaL78V-h2OlvXTIhXqJS-fny-PtUrZZV7Oj1XrP4EnW6W-BzbppBkk7rVXq4E4nEao"/>
+</div>
+<div class="p-md">
+<h3 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-xs">Rolo Compactador</h3>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant mb-md">Tecnologia avançada para compactação de solo com alta precisão.</p>
+<button class="w-full border-2 border-primary py-sm text-primary font-label-md hover:bg-primary hover:text-white transition-colors uppercase font-bold">Solicitar</button>
 </div>
 </div>
 </div>
@@ -348,146 +310,146 @@
 </div>
 </section>
 <!-- How it Works Section -->
-<section class="py-xl bg-surface-container-low border-y border-outline-variant" id="como-funciona">
-<div class="max-w-7xl mx-auto px-margin">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-white uppercase mb-sm">Fluxo de Locação</h2>
-<p class="text-on-surface-variant max-w-xl mx-auto">Processo simplificado e digital para otimizar o tempo da sua equipe de engenharia.</p>
+<section class="py-16 md:py-xl bg-surface-container border-y border-outline-variant" id="como-funciona">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin">
+<div class="text-center mb-12 md:mb-xl">
+<h2 class="font-headline-lg text-2xl md:text-headline-lg text-headline-blue uppercase mb-sm">Fluxo de Locação</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto text-sm md:text-base">Processo simplificado e digital para otimizar o tempo da sua equipe de engenharia.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-xl relative">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-xl relative">
 <!-- Connector Line (Desktop) -->
-<div class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-outline-variant z-0"></div>
+<div class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-border-industrial z-0"></div>
 <!-- Step 1 -->
 <div class="relative z-10 flex flex-col items-center text-center">
-<div class="w-24 h-24 bg-background border-2 border-primary rounded-full flex items-center justify-center mb-md shadow-[0_0_20px_rgba(255,140,0,0.2)]">
-<span class="font-display-lg text-display-lg text-primary">01</span>
+<div class="w-20 h-20 md:w-24 md:h-24 bg-white border-2 border-primary rounded-full flex items-center justify-center mb-md shadow-md">
+<span class="font-display-lg text-3xl md:text-display-lg text-primary">01</span>
 </div>
-<h4 class="font-headline-md text-headline-md text-white mb-sm">Escolha seu material</h4>
-<p class="font-body-md text-body-md text-on-surface-variant px-sm">Navegue por nosso catálogo e selecione as máquinas ou caçambas ideais para seu projeto.</p>
+<h4 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-sm">Escolha seu material</h4>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant px-sm">Navegue por nosso catálogo e selecione as máquinas ou caçambas ideais para seu projeto.</p>
 </div>
 <!-- Step 2 -->
 <div class="relative z-10 flex flex-col items-center text-center">
-<div class="w-24 h-24 bg-background border-2 border-primary rounded-full flex items-center justify-center mb-md shadow-[0_0_20px_rgba(255,140,0,0.2)]">
-<span class="font-display-lg text-display-lg text-primary">02</span>
+<div class="w-20 h-20 md:w-24 md:h-24 bg-white border-2 border-primary rounded-full flex items-center justify-center mb-md shadow-md">
+<span class="font-display-lg text-3xl md:text-display-lg text-primary">02</span>
 </div>
-<h4 class="font-headline-md text-headline-md text-white mb-sm">Solicite orçamento</h4>
-<p class="font-body-md text-body-md text-on-surface-variant px-sm">Envie sua demanda via formulário ou WhatsApp. Nossos consultores respondem em tempo recorde.</p>
+<h4 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-sm">Solicite orçamento</h4>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant px-sm">Envie sua demanda via WhatsApp ou e-mail. Nossos consultores respondem em tempo recorde.</p>
 </div>
 <!-- Step 3 -->
 <div class="relative z-10 flex flex-col items-center text-center">
-<div class="w-24 h-24 bg-background border-2 border-primary rounded-full flex items-center justify-center mb-md shadow-[0_0_20px_rgba(255,140,0,0.2)]">
-<span class="font-display-lg text-display-lg text-primary">03</span>
+<div class="w-20 h-20 md:w-24 md:h-24 bg-white border-2 border-primary rounded-full flex items-center justify-center mb-md shadow-md">
+<span class="font-display-lg text-3xl md:text-display-lg text-primary">03</span>
 </div>
-<h4 class="font-headline-md text-headline-md text-white mb-sm">Entrega rápida</h4>
-<p class="font-body-md text-body-md text-on-surface-variant px-sm">Logística integrada garante que o equipamento chegue ao local da obra no horário exato combinado.</p>
+<h4 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-sm">Entrega rápida</h4>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant px-sm">Logística integrada garante que o equipamento chegue ao local da obra no horário exato.</p>
 </div>
 </div>
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-xl bg-background" id="contato">
-<div class="max-w-7xl mx-auto px-margin">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
-<!-- Form side -->
+<section class="py-16 md:py-xl bg-white" id="contato">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-xl items-start">
+<!-- Info side -->
 <div>
-<h2 class="font-headline-lg text-headline-lg text-white uppercase mb-sm">Fale Conosco</h2>
-<p class="text-on-surface-variant mb-xl">Preencha os dados e receba uma proposta técnica personalizada.</p>
-
-</div>
-<!-- Map side -->
-<div class="h-full flex flex-col">
-<div class="bg-surface-container p-md industrial-border mb-md">
-<h4 class="font-headline-md text-headline-md text-white mb-md">Nossa Base Operacional</h4>
+<h2 class="font-headline-lg text-2xl md:text-headline-lg text-headline-blue uppercase mb-sm">Fale Conosco</h2>
+<p class="text-on-surface-variant mb-xl text-sm md:text-base">Entre em contato para receber uma proposta técnica personalizada e agilizar sua obra.</p>
+<div class="space-y-6">
+<div class="bg-surface-container p-6 industrial-border">
+<h4 class="font-headline-md text-lg md:text-headline-md text-headline-blue mb-md">Nossa Base Operacional</h4>
 <div class="flex items-start gap-md mb-md">
 <span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
-<p class="text-on-surface-variant font-body-md">Saquarema, Rio de Janeiro</p>
+<p class="text-on-surface-variant font-body-md text-sm md:text-base">Av. Saquarema, 1200 - Centro<br/>Saquarema - RJ, 28990-000</p>
+</div>
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<p class="text-on-surface-variant font-body-md text-sm md:text-base">contato@esmlocacoes.com.br</p>
 </div>
 <div class="flex items-start gap-md">
-<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-<p class="text-on-surface-variant font-body-md">contato@esmlocacoes.com.br</p>
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<p class="text-on-surface-variant font-body-md text-sm md:text-base">+55 (22) 99999-9999</p>
 </div>
 </div>
-<div class="flex-grow min-h-[350px] industrial-border grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all overflow-hidden relative">
-<div class="absolute inset-0 bg-surface-variant/20 pointer-events-none"></div>
-<!-- Map placeholder -->
-<img class="w-full h-full object-cover" data-alt="A high-fidelity satellite view map of an industrial district in São Paulo, Brazil. The map uses a dark mode aesthetic with deep grays and vibrant orange highlights for main arterial roads and industrial zones, reflecting the ESM Locações brand identity of engineering precision and high-tech infrastructure." data-location="São Paulo, Brazil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTIvAYLoIxFSOUBBtwLMtwCF5R7ZMAzM85OE6Gl6DG8Cj0Q7XrUHRWQ4JZ6QOzeBMxz4RG6SDFoCD7klRmZS8udeRSWkterx360v3qCh2o83HhZjaFSehQ9_JX2xzorzndVxUuZL6hSZGS0C7rZQHlCDFgup1S4kB4D90gyCEkPPXDpktAIvNsq9xSRbwH9VrONd85V4UMGdvxutZIG4eo6Tbd9qwpCI5x6NeAppGadVkqfusmkhWsttu0gUApQB5FHeBRPqhrJxA">
+<button class="bg-primary text-white px-8 py-4 font-label-md text-label-md font-bold uppercase w-full shadow-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined" data-icon="chat">chat</span> Chamar no WhatsApp
+                        </button>
 </div>
+</div>
+<!-- Map side -->
+<div class="h-full min-h-[350px] lg:min-h-[500px] border border-outline-variant grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all overflow-hidden relative">
+<img alt="Vista de satélite da região de Saquarema" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTIvAYLoIxFSOUBBtwLMtwCF5R7ZMAzM85OE6Gl6DG8Cj0Q7XrUHRWQ4JZ6QOzeBMxz4RG6SDFoCD7klRmZS8udeRSWkterx360v3qCh2o83HhZjaFSehQ9_JX2xzorzndVxUuZL6hSZGS0C7rZQHlCDFgup1S4kB4D90gyCEkPPXDpktAIvNsq9xSRbwH9VrONd85V4UMGdvxutZIG4eo6Tbd9qwpCI5x6NeAppGadVkqfusmkhWsttu0gUApQB5FHeBRPqhrJxA"/>
 </div>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full mt-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
-<div class="max-w-7xl mx-auto px-margin py-xl grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<footer class="w-full mt-12 bg-slate-900 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-gutter">
 <div class="space-y-md">
-<div class="font-headline-md text-headline-md font-extrabold text-primary uppercase">ESM Locações</div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                    Excelência em logística de máquinas e resíduos. Sua infraestrutura com a força da ESM.
-                </p>
+<div class="font-headline-md text-xl font-extrabold text-white uppercase">ESM Locações</div>
+<p class="font-body-md text-sm text-slate-400">
+                Excelência em logística de máquinas e resíduos. Sua infraestrutura com a força da ESM.
+            </p>
 <div class="flex gap-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
 </div>
 </div>
 <div class="space-y-md">
 <h5 class="font-label-md text-label-md text-white uppercase font-bold">Soluções</h5>
 <nav class="flex flex-col gap-sm">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Máquinas Pesadas</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Caçambas Estacionárias</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Logística Reversa</a>
+<a class="font-label-md text-sm text-slate-400 hover:text-white transition-colors" href="#">Máquinas Pesadas</a>
+<a class="font-label-md text-sm text-slate-400 hover:text-white transition-colors" href="#">Caçambas Estacionárias</a>
+<a class="font-label-md text-sm text-slate-400 hover:text-white transition-colors" href="#">Logística Reversa</a>
 </nav>
 </div>
 <div class="space-y-md">
-<h5 class="font-label-md text-label-md text-white uppercase font-bold">Institucional</h5>
-<nav class="flex flex-col gap-sm">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Termos de Uso</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Política de Privacidade</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sobre Nós</a>
-</nav>
+<h5 class="font-label-md text-label-md text-white uppercase font-bold">Contato</h5>
+<p class="font-label-md text-sm text-slate-400">
+                Av. Saquarema, 1200 - Centro<br/>Saquarema - RJ
+            </p>
+<p class="font-label-md text-sm text-slate-400">
+                contato@esmlocacoes.com.br
+            </p>
 </div>
 <div class="space-y-md">
-<h5 class="font-label-md text-label-md text-white uppercase font-bold">Newsletter Tech</h5>
-<p class="text-label-sm text-on-surface-variant">Receba atualizações sobre frota e novas tecnologias industriais.</p>
-
+<h5 class="font-label-md text-label-md text-white uppercase font-bold">Newsletter</h5>
+<p class="text-xs text-slate-400">Receba atualizações sobre frota e tecnologias.</p>
+<div class="flex">
+<input class="bg-slate-800 border-none p-2 text-white w-full focus:ring-1 focus:ring-primary text-sm" placeholder="Seu e-mail" type="email"/>
+<button class="bg-primary text-white p-2"><span class="material-symbols-outlined" data-icon="send">send</span></button>
 </div>
 </div>
-<div class="max-w-7xl mx-auto px-margin py-md border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-md">
-<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 ESM Locações. Engenharia e Precisão em Movimento.</p>
-<div class="flex gap-xl font-label-sm text-label-sm text-on-surface-variant/60 uppercase tracking-widest">
-<span class="">Engenharia Civil</span>
-<span class="">Logística Industrial</span>
-<span class="">Gestão de Resíduos</span>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-margin py-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-sm text-xs text-slate-500">© 2024 ESM Locações. Engenharia e Precisão em Movimento.</p>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-[10px] md:text-xs text-slate-500 uppercase tracking-widest">
+<span>Engenharia Civil</span>
+<span>Logística Industrial</span>
+<span>Gestão de Resíduos</span>
 </div>
 </div>
 </footer>
-<!-- FAB for direct WhatsApp - High focus on conversion -->
-<button class="fixed bottom-margin right-margin bg-primary-container text-black w-14 h-14 rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-transform z-[100] group">
+<!-- FAB -->
+<button class="fixed bottom-6 right-6 md:bottom-margin md:right-margin bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl active:scale-95 transition-transform z-[100] group">
 <span class="material-symbols-outlined text-3xl" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
-<span class="absolute right-full mr-md bg-surface-container px-md py-1 border border-outline-variant text-white font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Falar com Consultor</span>
+<span class="absolute right-full mr-md bg-white px-md py-1 border border-outline-variant text-primary font-bold font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg hidden md:block">Falar com Consultor</span>
 </button>
 <script>
-        // Micro-interactions and smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
-            });
+            }
         });
-
-        // Form focus visual feedback
-        const inputs = document.querySelectorAll('input, textarea, select');
-        inputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                input.parentElement.querySelector('label').classList.replace('text-on-surface-variant', 'text-primary');
-            });
-            input.addEventListener('blur', () => {
-                input.parentElement.querySelector('label').classList.replace('text-primary', 'text-on-surface-variant');
-            });
-        });
-    </script>
-
-
+    });
+</script>
 </body></html>
